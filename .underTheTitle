@@ -1,31 +1,45 @@
 <link type="text/css" rel="stylesheet" href="https://hatena.wackwack.net/v1.1/css/fulldisplay.min.css"/>
 
-<span class="menu-toggle"><i class="blogicon-reorder lg"></i>MENU</span>
-<ul id='menu'>
-<div class="menu-inner">
-<li><a href='https://traveler-cipher.hatenablog.com/entry/2020/01/05/110006'>自己紹介</a></li>
-<li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E6%97%85%E8%A1%8C%E8%A8%98'>旅行記</a></li>
-<li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E3%81%8A%E5%AE%BF%E7%B4%B9%E4%BB%8B'>お宿紹介</a></li>
-<li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E6%AD%B4%E5%8F%B2%E8%AB%87%E7%BE%A9'>歴史談義</a></li>
-<li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E5%9C%B0%E7%90%86%E8%AB%87%E7%BE%A9'>地理談義</a></li>
-<li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E7%B5%B6%E6%99%AF100%E9%81%B8'>絶景100選</a></li>
+<div id="menu">
+<div id="menu-inner">
+    <div id="btn-content">
+        <span id="menu-btn"><i class="blogicon-reorder"></i>MENU</span>
+    </div>
+    <ul id="menu-content">
+    <li><a href='https://traveler-cipher.hatenablog.com/entry/2020/01/05/110006'>自己紹介</a></li>
+    <li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E6%97%85%E8%A1%8C%E8%A8%98'>旅行記</a></li>
+    <li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E3%81%8A%E5%AE%BF%E7%B4%B9%E4%BB%8B'>お宿紹介</a></li>
+    <li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E6%AD%B4%E5%8F%B2%E8%AB%87%E7%BE%A9'>歴史談義</a></li>
+    <li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E5%9C%B0%E7%90%86%E8%AB%87%E7%BE%A9'>地理談義</a></li>
+    <li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E7%B5%B6%E6%99%AF100%E9%81%B8'>絶景100選</a></li>
+        <!--<li>-->
+        <!--    <a href="http://">aaa</a>-->
+        <!--    <ul class="second-content">-->
+        <!--        <li><a href="http://">ccc</a></li>-->
+        <!--    </ul>-->
+        <!--</li>-->
+
+    </ul>
 </div>
-</ul>
+</div>
+<div style="clear:both"></div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script>
-    $(function(){
-        $(".menu-toggle").on("click", function() {
-            $(this).next().slideToggle();
-        });
+$(function(){
+    var menuBtn = $("#menu-btn"),
+        menuContent = $("#menu-content");
+    menuBtn.click(function(){
+        menuContent.slideToggle();
     });
-     $(window).resize(function(){
-    var win = $(window).width();
-    var p = 768;
-    if(win > p){
-      $("#menu").show();
-    } else {
-      $("#menu").hide();
-    }
-  });
+    $(window).resize(function(){
+        var win = $(window).width(),
+            p = 960;
+        if(win > p){
+            menuContent.show();
+        }else{
+            menuContent.hide();
+        }
+    });
+});
 </script>
