@@ -1,0 +1,7 @@
+/* <system section="theme" selected="journal-pink"> */
+@import "/css/theme/journal-pink/journal-pink.css";
+/* </system> */
+
+/* <system section="background" selected="pattern-07"> */
+body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); background-repeat: repeat; background-attachment: scroll; background-position: 0 0; background-size: 315px 315px; } @media (-webkit-min-device-pixel-ratio: 2) { body {background-image: url('/images/theme/backgrounds/2014/pattern-07@2x.png');} }
+/* </system> */
