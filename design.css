@@ -34,7 +34,7 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
  line-height: 40px;
 }
 #menu li:hover a {
- color: #00DFFC;
+ color: #47fc00;
  background: #ffffff;
  transition: all .5s;
 }
@@ -96,4 +96,9 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
   color: initial;
   background: initial;
  }
+}
+
+.archive-header-category .archive-heading::after  {
+    content: " に関する記事一覧";/*説明文*/
+    font-size: 1.2rem;/*カテゴリ名より小さく*/
 }
