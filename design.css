@@ -119,3 +119,8 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
 #menu-content > li:hover > ul.second-content{display: none;}
 #menu-content > li > a > .blogicon-chevron-down{display: none;}
 }
+
+.archive-header-category .archive-heading::after  {
+    content: " に関する記事一覧";/*説明文*/
+    font-size: 1.2rem;/*カテゴリ名より小さく*/
+}
