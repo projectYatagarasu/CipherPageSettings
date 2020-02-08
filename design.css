@@ -219,10 +219,11 @@ padding:0!important;
 .snsbtniti{
 display:flex;
 flex-flow:row wrap;
-justify-content:space-around;
+/*justify-content:space-around;*/
 }
 /* ボタン同士の余白調整 */
 .snsbtniti li{
 flex:0 0 33%;
 text-align:center!important;
 }
+
