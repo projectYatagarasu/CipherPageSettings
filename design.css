@@ -226,18 +226,3 @@ flex-flow:row wrap;
 flex:0 0 33%;
 text-align:center!important;
 }
-
-/* ページトップへ戻るボタン */
-#pagetop {
-    position:fixed;
-    bottom:10px;
-    right:10px;
-    padding:10px 20px;
-    color:#dcdcdc;
-    text-align:center;
-}
-
-/* ページトップへ戻るボタン：ホバー時 */
-#move-page-top:hover{
-  color:rgba(0,0,0,0.8);
-}
