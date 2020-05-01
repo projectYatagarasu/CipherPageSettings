@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet" href="https://hatena.wackwack.net/v1.1/css/fulldisplay.min.css"/>
 
 <div id="menu">
@@ -14,9 +15,9 @@
     <li><a href='https://traveler-cipher.hatenablog.com/archive/category/%E7%B5%B6%E6%99%AF100%E9%81%B8'>絶景100選</a></li>
         <!--<li>-->
         <!--    <a href="http://">aaa</a>-->
-        <!--    <ul class="second-content">-->
-        <!--        <li><a href="http://">ccc</a></li>-->
-        <!--    </ul>-->
+            <!--<ul class="second-content">-->
+            <!--    <li><a href="http://">ccc</a></li>-->
+            <!--</ul>-->
         <!--</li>-->
 
     </ul>
