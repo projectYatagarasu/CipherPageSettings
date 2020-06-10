@@ -262,3 +262,54 @@ text-decoration: underline; }
 color: #fff; }
 .toTop-nav li a:hover {
 text-decoration: none; }
+
+/*1つ1つの関連記事ボックス*/
+li.urllist-item.related-entries-item {
+    margin: 15px 0;
+    padding: 10px;
+    background: #eeeeee;
+    border-bottom: none;
+}
+
+/*関連記事の画像まわり余白調整*/
+.urllist-with-thumbnails li .urllist-image {
+    margin: 0 10px 0 0;
+}
+
+/*関連記事のタイトル*/
+a.urllist-title-link.related-entries-title-link.urllist-title.related-entries-title {
+    text-decoration: none;
+    color: #525252;
+    font-weight: bold;
+}
+
+/*関連記事のタイトルホバー*/
+a.urllist-title-link.related-entries-title-link.urllist-title.related-entries-title:hover {
+    color: silver;
+}
+
+/*関連記事の説明*/
+.urllist-entry-body.related-entries-entry-body {
+    color: #8f8f8f;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+/*関連記事の日付*/
+.hatena-urllist .urllist-date-link a {
+    display: inline-block;
+    background: #93c4cf;
+    color: #fff;
+    line-height: 1;
+    padding: 4px 9px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-style: normal;
+       text-decoration: none;
+}
+
+.hatena-module-body {
+  text-align: left;
+}
