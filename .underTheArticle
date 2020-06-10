@@ -24,7 +24,7 @@ get_social_count_hatebu('{Permalink}', '.hatebu-count');
 </script>
 <!--シェアボタン-->
 <div class="share-flat">
-<span style="font-size: 8px">この記事をシェアする</span>
+<span style="font-size: 20px">この記事をシェアする</span>
 <div class="share-flat-inner">
 <!--はてブ-->
 <p><a href="https://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="blogicon-bookmark lg"></i><br> <span class="hatebu-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
@@ -43,3 +43,11 @@ get_social_count_hatebu('{Permalink}', '.hatebu-count');
 <a href="https://line.me/R/msg/text/?{Title} -旅人サイファのお出かけブログ {URLEncodedPermalink}"  class="line-button" target="_blank"><i class="fab fa-line"></i><br><span class="small-text">LINE</span></a></p>
 </div>
 </div>
+
+<script type="text/javascript">
+$(function(){
+  $(window).on("DOMContentLoaded", function(){
+        $('.hatena-module-related-entries').insertAfter('.share-flat-inner');
+  });
+})(jQuery);
+</script>
