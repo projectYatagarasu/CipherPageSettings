@@ -313,3 +313,10 @@ a.urllist-title-link.related-entries-title-link.urllist-title.related-entries-ti
 .hatena-module-body {
   text-align: left;
 }
+
+/*記事エントリ一覧のカスタマイズ*/
+section {
+border: 0.5px solid #dcdcdc;
+padding:20px;
+box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
+}
