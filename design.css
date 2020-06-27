@@ -296,7 +296,7 @@ a.urllist-title-link.related-entries-title-link.urllist-title.related-entries-ti
 }
 
 /*関連記事の日付*/
-.hatena-urllist .urllist-date-link a {
+.hatena-urllist .urllist-date-link a .ad-list-nend{
     display: inline-block;
     background: #93c4cf;
     color: #fff;
@@ -310,8 +310,23 @@ a.urllist-title-link.related-entries-title-link.urllist-title.related-entries-ti
        text-decoration: none;
 }
 
+/*関連記事の調整*/
 .hatena-module-body {
   text-align: left;
+}
+
+/*4番目５番目を消す*/
+.related-entries-item:nth-of-type(4){
+  display: none;
+}
+
+.related-entries-item:nth-of-type(5){
+  display: none;
+}
+
+/* フッターを非表示*/
+#footer {
+display: none;
 }
 
 /*記事エントリ一覧のカスタマイズ*/
