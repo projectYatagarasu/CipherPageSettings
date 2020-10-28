@@ -335,3 +335,78 @@ border: 0.5px solid #dcdcdc;
 padding:20px;
 box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
 }
+
+
+
+/* Pager */
+.pager {
+    position: relative;
+    margin: 2em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.pager a {
+    color: RGB(68, 153, 187);
+}
+
+.pager a:hover {
+    color: RGB(68, 153, 187);
+}
+
+.pager.autopagerize_insert_before .pager-prev {
+    padding: .5em 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pager.autopagerize_insert_before .pager-prev a {
+    padding: .5em 1em .5em 2em;
+}
+
+.pager.autopagerize_insert_before .pager-prev:before {
+    content: "<<";
+    font-weight: 900;
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    color: RGB(68, 153, 187);
+}
+
+.pager.autopagerize_insert_before .pager-next {
+    padding: .5em 0;
+    border: 1px solid #ddd;
+    margin-left: auto;
+    border-radius: 3px;
+}
+
+.pager.autopagerize_insert_before .pager-next a {
+    padding: .5em 2em .5em 1em;
+}
+
+.pager.autopagerize_insert_before .pager-next:after {
+    content: ">>";
+    font-weight: 900;
+    position: absolute;
+    right: .5em;
+    top: .5em;
+    color: RGB(68, 153, 187);
+}
+
+.pager.pager-permalink .pager-prev {
+    margin-right: .25em;
+    padding: .5em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pager.pager-permalink .pager-next {
+    margin-left: auto;
+    padding: .5em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
