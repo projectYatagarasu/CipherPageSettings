@@ -12,3 +12,23 @@
 <script>
 function smoothScroll(o){var e=window.pageYOffset,l=o>e;setTimeout(function(){l&&o>=e?(e=e+(o-e)/20+1,window.scrollTo(0,e),setTimeout(arguments.callee,10)):!l&&e>=o?(e=e-(e-o)/20-1,window.scrollTo(0,e),setTimeout(arguments.callee,10)):window.scrollTo(0,o)},10)}
 </script>
+
+
+<script type="text/javascript">
+    // 現在のページが記事一覧の2ページ目以降の場合処理実行
+    if (location.search.indexOf("?page=") === 0) {
+        // aタグの作成
+        var a = document.createElement('a');
+        a.addEventListener("click", function(){history.back();}); // クリックすると一つ前の履歴に戻る処理を追加
+        a.innerHTML = "前のページ"
+        a.setAttribute("href", "javascript:void(0);");
+        a.setAttribute("rel", "prev"); // seo対策
+        // spanタグの作成（中に作成したaタグを入れる）
+        var span = document.createElement('span');
+        span.classList.add('pager-prev');
+        span.appendChild(a);
+        // classがpagerのdivタグに上記で作成したものを挿入する（classがpager-nextのspanタグよりも前に挿入する）
+        var element = document.getElementsByClassName("pager")[0];
+        element.insertBefore(span, element.firstChild);
+    }
+</script>
