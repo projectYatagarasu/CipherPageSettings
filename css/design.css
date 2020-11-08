@@ -410,3 +410,195 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
     border: 1px solid #ddd;
     border-radius: 3px;
 }
+
+
+/*---------------
+◆ ふきだし ◆<
+--------------*/
+ 
+/*=== 共通設定 ===*/
+/*全体の上下左右の余白*/
+.fuki {
+  margin: 20px 0 ;
+}
+.fuki:after,.fuki:before { 
+  clear: both; /*テキスト回り込み解除*/
+  content: ""; 
+  display: block;
+}
+/*アイコン画像の設定*/
+.fuki figure {
+  margin: 0;
+  display: block;
+}
+.fuki figure img {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 50%;
+  margin: 0;
+  vertical-align: middle;
+  border: 1px solid #ccc; /*◎アイコン画像の枠線の太さと色の変更*/
+}
+/*アイコン画像の設定*/
+.fuki-img-left {
+  margin-left: 10px; 
+  margin-top: 1px; 
+  float: left;
+}
+.fuki-img-right {
+  margin-right: 10px; 
+  margin-top: 1px; 
+  float: right;
+}
+.fuki-img-left, .fuki-img-right {
+  width: 90px; 
+  height: 90px;
+}
+/*アイコン画像の名前*/
+.fuki-img-name {
+  padding: 0;
+  margin-top: 3px; 
+  font-size: 10px; 
+  line-height: 1.2em; 
+  font-weight: 400; 
+  text-align: center; 
+  display: block;
+}
+/*=== 会話風ふきだし ===*/
+.chat-text-left, .chat-text-right {
+  position: relative;
+  margin: 0 100px 16px;
+  padding: 16px;
+  box-shadow: 1px 1px 5px #aaaaaa90; /*◎ふきだしの影*/
+  border-radius: 10px; /*◎ふきだしの丸さ調整*/
+}
+.chat-text-left p,.chat-text-right p {
+  margin:0 !important;
+  font-size: 16px; 
+  color: #555; /*◎ふきだし内テキスト文字色*/
+}
+/*左からのふきだし*/
+.chat-text-left {
+  background-color: #f0f0f0; /*★①左ふきだし背景色*/
+  border: 1px solid #aaa; /*★②左ふきだし枠線の色*/
+}
+/*左からのふきだしの三角部分*/
+.chat-text-left:after {
+  position: absolute; 
+  top: 16px; 
+  left: -22px; 
+  content: '';
+  border: 12px solid transparent;
+  border-right: 12px solid #f0f0f0; /*★①ふきだし背景色*/
+}
+.chat-text-left:before { 
+  position: absolute; 
+  top: 16px; 
+  left: -24px; 
+  content: '';
+  border: 12px solid transparent ;
+  border-right: 12px solid #aaa; /*★②左ふきだし枠線の色*/
+}
+/*右からのふきだし*/
+.chat-text-right { 
+  background-color: #99ff99; /*★③右ふきだし背景色*/
+  border: 1px solid #00ff00; /*★④右ふきだし枠線の色*/
+} 
+/*左からのふきだしの三角部分*/
+.chat-text-right:after {
+  position: absolute; 
+  top: 16px; 
+  right: -22px; 
+  content: '';
+  border: 12px solid transparent;
+  border-left: 12px solid #99ff99; /*③右ふきだし背景色*/
+}
+.chat-text-right:before {
+  position: absolute; 
+  top: 16px; 
+  right: -24px; 
+  content: '';
+  border: 12px solid transparent;
+  border-left: 12px solid #00ff00; /*★④右ふきだし枠線の色*/
+}
+ 
+/*=== もくもくふきだし ===*/
+.mkmk-text-left, .mkmk-text-right{ 
+  position: relative;
+  margin: 0 100px 16px; 
+  padding: 16px;
+  box-shadow: 1px 1px 5px #aaaaaa90; /*★もくもくの影*/
+  border-radius: 30px; /*★もくもくの丸さ調整*/
+}
+.mkmk-text-left p,.mkmk-text-right p {
+  margin: 0 !important;
+  font-size: 16px; 
+  color: #555; /*★もくもく内テキスト文字色*/
+}
+/*左からのもくもく*/
+.mkmk-text-left {
+  background-color: #ffaadd; /*★⑤左もくもく背景色*/
+  border: 1px solid #ff66aa; /*★⑥左もくもく枠線の色*/
+}
+/*左もくもくの丸い部分*/
+.mkmk-text-left:before {
+  position: absolute; 
+  content: ''; 
+  top: 16px; 
+  left: -16px;
+  border-radius: 50%; 
+  width: 12px; 
+  height: 12px;
+  background-color: #ffaadd; /*★⑤左もくもく背景色*/
+  border: 1px solid #ff6699; /*★⑥左もくもく枠線の色*/
+}
+.mkmk-text-left:after {
+  position: absolute; 
+  content: ''; 
+  top: 26px; 
+  left: -26px;
+  border-radius: 50%; 
+  width: 8px; 
+  height: 8px;
+  background-color: #ffaadd; /*★⑤左もくもく背景色*/
+  border: 1px solid #ff6699; /*★⑥左もくもく枠線の色*/
+}
+/*右からのもくもく*/
+.mkmk-text-right { 
+  background-color: #88ddff; /*★⑦右もくもく背景色*/
+  border: 1px solid #55aaff; /*★⑧右もくもく枠線の色*/
+}
+/*右からのもくもくの丸い部分*/
+.mkmk-text-right:before {
+  position: absolute; 
+  content: ''; 
+  top: 16px; 
+  right: -16px;
+  border-radius: 50%; 
+  width: 12px; 
+  height: 12px;
+  background-color: #88ddff; /*★⑦右もくもく背景色*/
+  border: 1px solid #55aaff; /*★⑧右もくもく枠線の色*/
+}
+.mkmk-text-right:after {
+  position: absolute; 
+  content: ''; 
+  top: 26px; 
+  right: -26px;
+  border-radius: 50%; 
+  width: 8px; 
+  height: 8px;
+  background-color: #88ddff; /*★⑦右もくもく背景色*/
+  border: 1px solid #55aaff; /*★⑧右もくもく枠線の色*/
+}
+/*=== レスポンシブ設定 ===*/
+@media (max-width: 767px){
+  /*スマホ表示の時は横幅いっぱいに広げる*/
+  .chat-text-left, .mkmk-text-left {margin-left: 90px; margin-right: 0;}
+  .chat-text-right, .mkmk-text-right {margin-left: 0; margin-right: 90px;}
+  /*スマホ表示の時はふきだし画像サイズを小さくする*/
+  .fuki-img-left,.fuki-img-right {width: 80px; height: 80px;}
+}
+ 
+/*-- ふきだしここまで ----
+---------------------------*/
