@@ -31,7 +31,7 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
     float: left;
     height: 100%;
     text-align: center;
-    width: 16.65%;/*項目増えたらここ変える*/
+    width: 14.25%;/*項目増えたらここ変える*/
 }
 #menu-content > li > a{
     position: relative;
@@ -602,3 +602,4 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
  
 /*-- ふきだしここまで ----
 ---------------------------*/
+
