@@ -6,4 +6,50 @@
     .share-flat .pocket-button{background: #EE4256;}
     .share-flat .line-button{background: #00C300;}
     .share-flat a:active{    opacity: 0.6;}
-</style>
+    </style>
+    
+    <!--シェアボタン-->
+    <!--<br>-->
+    <!--シェア数の取得-->
+    <script>
+    //はてなブックマークではてブ数を取得
+    function get_social_count_hatebu(url, selcter) {
+    jQuery.ajax({
+    url:'https://b.hatena.ne.jp/entry.count?callback=?',
+    dataType:'jsonp',
+    data:{
+    url:url
+    },
+    success:function(res){
+    jQuery( selcter ).text( res || 0 );
+    },
+    error:function(){
+    jQuery( selcter ).text('0');
+    }
+    });
+    }
+    jQuery(function(){
+    get_social_count_hatebu('{Permalink}', '.hatebu-count');
+    });
+    </script>
+    <!--シェアボタン-->
+    <div class="share-flat">
+    <div class="share-flat-inner">
+    <!--はてブ-->
+    <p><a href="https://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="blogicon-bookmark lg"></i><br> <span class="hatebu-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
+    
+    <!--Facebook-->
+    <a href="https://www.facebook.com/sharer.php?u={URLEncodedPermalink}" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="facebook-button"><i class="blogicon-facebook lg"></i><br><span class="small-text">Facebook</span></a>
+    
+    <!--Twitter-->
+    <a href="https://twitter.com/intent/tweet?via=nikolaevbonifa1
+     &related=nikolaevbonifa1&hashtags=旅行プランニング,旅人サイファ&text={Title} -旅人サイファのお出かけブログ {URLEncodedPermalink}" target="_blank" class="twitter-button"><i class="blogicon-twitter lg"></i><br><span class="small-text">Twitter</span></a>
+     
+    <!--Pocket-->
+    <a href="https://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fab fa-get-pocket"></i><br><span class="small-text">Pocket</span></a>
+    
+    <!--LINE-->
+    <a href="https://line.me/R/msg/text/?{Title} -旅人サイファのお出かけブログ {URLEncodedPermalink}"  class="line-button" target="_blank"><i class="fab fa-line"></i><br><span class="small-text">LINE</span></a></p>
+    </div>
+    </div>
+    
