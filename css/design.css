@@ -603,3 +603,23 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
 /*-- ふきだしここまで ----
 ---------------------------*/
 
+/*↓----更新日時表示----↓*/
+.lastmod {
+  background-color: transparent;
+  padding: 5px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline;
+  margin-left: 0px;
+  color: #888888;
+  }
+  .lastmod::before {
+  margin-right: 5px;
+  margin-left: 10px;
+  padding-left: 3px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  content: '\f01e';
+  }
+  /*↑----更新日時表示----↑*/
+  

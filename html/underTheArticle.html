@@ -51,3 +51,65 @@ $(function(){
   });
 })(jQuery);
 </script>
+
+
+<!-- 更新日時表示 -->
+<!--[if lt IE 9]>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
+  <!--<![endif]-->
+  <script>
+  ;(function($) {
+  'use strict';
+  var urls = [], opts = {cache: false, dataType: 'xml'}, p,
+  url = 'https://traveler-cipher.hatenablog.com/sitemap.xml';
+  function parseSitemapXML(url) {
+  var d = new $.Deferred;
+  $.ajax($.extend(opts, {
+  url: url
+  })).done(function(xml) {
+  $(xml).find('sitemap').each(function() {
+  urls.push($(this).find('loc').text());
+  });
+  d.resolve();
+  }).fail(function() {
+  d.reject();
+  });
+  return d.promise();
+  }
+  function findURL(url) {
+  $.ajax($.extend(opts, {
+  url: url
+  })).done(function(xml) {
+  var isMatched = false;
+  $(xml).find('url').each(function() {
+  var $this = $(this);
+  if ($this.find('loc').text() === location.href) {
+  isMatched = true;
+  appendLastmod($this.find('lastmod').text());
+  return false;
+  }
+  });
+  if (!isMatched) nextURL();
+  }).fail(function() {});
+  }
+  function nextURL() {
+  urls.shift();
+  if (urls.length) findURL(urls[0]);
+  }
+  function appendLastmod(lastmod) {
+  var $container = $('<div></div>', {'class': 'lastmod'}).text(lastmod.replace(/T.*0/,""));
+  if ($('.entry-header > .date').get(0).tagName.toLowerCase() === 'span') {
+  $('.entry-title').before($container);
+  } else {
+  $('.entry-date').append($container);
+  }
+  }
+  p = parseSitemapXML(url);
+  p.done(function() {findURL(urls[0])});
+  p.fail(function(error) {});
+  })(jQuery);
+  </script> 
+
