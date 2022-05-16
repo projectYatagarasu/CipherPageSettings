@@ -1,0 +1,127 @@
+<p>どうも！旅人サイファです！</p>
+<blockquote>
+<p>自己紹介とコンセプト的な何か</p>
+</blockquote>
+<p> </p>
+<p> </p>
+<style>
+/* サイドバー・日付を消す */
+#box2,
+.entry-header,
+.entry-footer {
+display: none;
+}
+
+/**
+ * 関連記事
+ */
+ .recomend{
+   width:560px;
+ }
+ .recomend ul{
+   margin:0;
+   padding:0;
+ }
+ .recomend li{
+   display: inline-block;
+   vertical-align: top;
+   width:150px;
+   margin-right:15px;
+   list-style: none;
+   padding: 0;
+   margin-bottom: 20px;
+ }
+ .recomend li:nth-child(6){ /* 表示件数アイテムに応じて変更、改行のタイミング制御 */
+   margin-right:0;
+ }
+.recomend li p{
+  font-size:80%;
+}
+
+p.imgP{
+  width: 170px;  /* トリミングしたい幅 */
+  height: 100px;  /* トリミングしたい高さ */
+  overflow: hidden;
+  position: relative;
+}
+
+ .imgP img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+ }
+</style>
+<p>
+<script>
+    $.ajax({
+        //はてなrssファイルを読み込む
+        //ブログのアドレスの最後にrssをつける
+     url:'https://traveler-cipher.hatenablog.com/rss',
+     success: function(data){
+
+        //はてなrssの読み込み
+        var rss_url = 'https://traveler-cipher.hatenablog.com/rss';
+
+        var htmlstr = "";
+        htmlstr += '<div class="recomend">';
+        htmlstr += '<p><span style="font-size: 150%;"><strong>最新記事</strong></span></p>';
+        htmlstr += '<ul>';
+
+        //アイテムの調整
+        $.get(rss_url, function(data) {
+            $(data).find("item").each(function (i) {
+                var el = $(this);
+                var elimg = el.find("enclosure").attr("url");
+
+                htmlstr += '<li class="section">';
+                htmlstr += '<p class="imgP"><img src="' + elimg + '" alt="" width="150" height="300"></p>';
+                htmlstr += '<a href="' + el.find("link").text() + ' " "target="_blank">' + el.find("title").text() + '</a>';
+                htmlstr += '</li>';
+                    
+                if(i === 5) { // 表示件数の設定
+                    return false;
+                };
+            });
+
+            htmlstr += '</ul>';
+            htmlstr += '</div>';
+          
+        var viewArea = document.getElementById("viewArea");
+        viewArea.innerHTML = htmlstr;
+          });
+     }
+});
+  </script>
+</p>
+<div id="viewArea"></div> <!-- 置き換え先 -->
+<p><span style="font-size: 125%;"><a href="https://traveler-cipher.hatenablog.com/archive" target="_blank">もっと見る</a></span></p>
+<p> </p>
+<p> </p>
+<div class="recomend">
+    <p><span style="font-size: 150%;"><strong>おすすめ記事</strong></span></p>
+    <ul>
+        <li class="section">
+            <p class="imgP"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/traveler-cipher/20210223/20210223051404.png" width="150" height="300" /></p>
+            <a href="https://traveler-cipher.hatenablog.com/entry/2021/02/23/114504" target="_blank">『国道家系図』完成！全58本の旧一級国道を家系図にしてみました！</a></li>
+        <li class="section">
+            <p class="imgP"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/traveler-cipher/20201031/20201031045837.png" width="150" height="300" /></p>
+            <a href="https://traveler-cipher.hatenablog.com/entry/2020/07/18/114812" target="_blank">名古屋県に金澤県！？本来はこうなるはずだった！幻の28道府県制をご存知ですか？</a></li>
+        <li class="section">
+            <p class="imgP"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/traveler-cipher/20210223/20210223051404.png" width="150" height="300" /></p>
+            <a href="https://traveler-cipher.hatenablog.com/entry/2021/02/23/114504" target="_blank">『国道家系図』完成！全58本の旧一級国道を家系図にしてみました！</a></li>
+        <li class="section">
+            <p class="imgP"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/traveler-cipher/20210223/20210223051404.png" width="150" height="300" /></p>
+            <a href="https://traveler-cipher.hatenablog.com/entry/2021/02/23/114504" target="_blank">『国道家系図』完成！全58本の旧一級国道を家系図にしてみました！</a></li>
+        <li class="section">
+            <p class="imgP"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/traveler-cipher/20210223/20210223051404.png" width="150" height="300" /></p>
+            <a href="https://traveler-cipher.hatenablog.com/entry/2021/02/23/114504" target="_blank">『国道家系図』完成！全58本の旧一級国道を家系図にしてみました！</a></li>
+        <li class="section">
+            <p class="imgP"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/traveler-cipher/20210223/20210223051404.png" width="150" height="300" /></p>
+            <a href="https://traveler-cipher.hatenablog.com/entry/2021/02/23/114504" target="_blank">『国道家系図』完成！全58本の旧一級国道を家系図にしてみました！</a></li>
+        </ul>
+</div>
+<p>ここにもなんか書けますよ〜〜〜</p>
+<p> </p>
