@@ -1,0 +1,9 @@
+/* 参考：https://www.ahiru-nonnbiri-blog.work/entry/homepage-change */
+/* サイドバー・日付を消す */
+#box2,
+.entry-header,
+.entry-footer {
+display: none;
+}
+
+/* 以下トップページ用のデザイン向けのhtmlを書く */
