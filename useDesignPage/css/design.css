@@ -623,3 +623,8 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
   }
   /*↑----更新日時表示----↑*/
   
+  /* ブログ本文フォント大きさ変更 */
+  .entry-content {
+    font-size:16px;
+}
+  
