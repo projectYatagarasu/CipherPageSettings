@@ -702,3 +702,12 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
     line-height: 1.6em;
     text-decoration: underline;
 }
+
+/* h3 などのラインを消す */
+.entry-content h3 {
+    border-left: none;
+}
+
+.entry-content h4 {
+  border-left: none;
+}
