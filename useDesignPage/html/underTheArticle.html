@@ -113,3 +113,20 @@ $(function(){
   })(jQuery);
   </script> 
 
+<br>
+<a class="leave-comment-title js-leave-comment-title">コメントを書く</a>
+<div class="comment-box js-comment-box">
+<ul class="comment js-comment">
+<li class="read-more-comments" style="display: none;"><a>もっと読む</a></li>
+</ul>
+</div>
+  <p>　</p>
+<script>
+// <![CDATA[
+document.addEventListener('DOMContentLoaded', function(){
+   var entry = document.getElementsByClassName("comment-box");
+   if(entry.length >=2){
+      entry[1].innerHTML="<!-- 本来のコメント欄 -->";
+   }
+}, false);
+// ]]></script>
