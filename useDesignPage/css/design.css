@@ -738,12 +738,13 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
 
 .author {
   position: relative;
-  width: 100%;
+  width: 93%;
   padding: 15px;
   border-width: 3px;
   border-color: #959393;
   border-style: solid;
   background-color: white;
+  right: 5px;
 }
 
 .author-content {
@@ -791,7 +792,7 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
 
 .author-sns .author-link {
   color: #181818;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 
