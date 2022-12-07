@@ -711,3 +711,85 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
 .entry-content h4 {
   border-left: none;
 }
+
+
+/* 記事本文末尾 */
+.subtitle {
+  position: relative;
+  line-height: 1em;
+  padding-left: 1em;
+  font-weight: bold;
+}
+
+.subtitle::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 20px;
+  content: "";
+  background-color: #181818;
+}
+
+.entry-footer-section.track-inview-by-gtm {
+  display: none;
+}
+
+.author {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  border-width: 3px;
+  border-color: #959393;
+  border-style: solid;
+  background-color: white;
+}
+
+.author-content {
+  display: flex;
+  padding-top: 15px;
+}
+
+.author-content-image {
+  margin-right: 1em;
+}
+
+.author-content-image .author-image {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  min-height: 64px;
+  border-radius: 50%;
+}
+
+.author-content-text .author-name {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.author-name-link {
+  color: #119e4d;
+}
+
+.author-content-text .author-description {
+  font-size: 14px;
+}
+
+.author .author-sns {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.author-sns .author-sns-item {
+  margin-left: 1em;
+}
+
+.author-sns .author-link {
+  color: #181818;
+  font-size: 20px;
+}
