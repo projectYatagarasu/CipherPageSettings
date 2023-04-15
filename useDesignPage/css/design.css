@@ -23,7 +23,6 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
   line-height: 40px;
   margin: 0 auto;
   list-style: none;
-  padding-right: 25px; /* 右側の固定分余白を空ける */
 }
 .scroll-nav ul li {
   float: left;
