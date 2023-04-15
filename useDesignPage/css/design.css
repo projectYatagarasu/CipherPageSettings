@@ -38,16 +38,7 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
   color: #fff; /* メニューの文字色 */
   text-decoration: none;
 }
-.next-btn { /* 右側に固定する部分 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 25px; /* 固定部分の幅 */
-  height: 40px; /* メニューの高さに合わせる */
-  line-height: 40px;
-  background: #fff;
-  color: #555;
-}
+
 @media only screen and (min-width: 771px) { /* PCサイズでの指定 */
 .scroll-nav ul {
   padding: 0;
