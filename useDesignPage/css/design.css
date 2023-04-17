@@ -7,48 +7,44 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
 /* </system> */
 
 /*****グローバルメニュー****/
-.nav-wrap {
-  position: relative;
-}
-.scroll-nav {
+
+.gnav {
   width: 100%;
-  background: #555; /* メニューの背景色 */
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* 慣性スクロール */
-}
-.scroll-nav ul {
-  max-width: 1060px; /* メニューの最大幅 */
-  min-width: 770px; /* メニューの最小幅 */
   height: 40px;
-  line-height: 40px;
-  margin: 0 auto;
+  background: #9fb7d4;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.gnav ul {
+  width: 800px;
+  height: 40px;
+  margin: 0 auto 2px auto;
   list-style: none;
+  display: flex;
 }
-.scroll-nav ul li {
-  float: left;
-  width: 110px; /* メニューの個別の幅 */
+.gnav ul li {
   text-align: center;
+  border-left: 1px solid #eee;
 }
-.scroll-nav ul li:hover {
-  background: #222; /* マウスホバー時の背景色 */
+.gnav ul li:last-child {
+  border-right: 1px solid #eee;
 }
-.scroll-nav ul li a {
+.gnav ul li a,
+.gnav ul li a:link,
+.gnav ul li a:visited {
   display: inline-block;
-  color: #fff; /* メニューの文字色 */
+  width: 96px;
+  height: 40px;
+  background: #9fb7d4;
+  color: #fff;
   text-decoration: none;
 }
+.gnav ul li a:hover,
+.gnav ul li a:active {
+  background: #afc6e2;
+}
 
-@media only screen and (min-width: 771px) { /* PCサイズでの指定 */
-.scroll-nav ul {
-  padding: 0;
-}
-.scroll-nav ul li {
-  width: 14.2%; /* メニューの個別の幅 */
-}
-.next-btn {
-  display: none; /* 右側の固定部分を非表示 */
-}
-}
 
 
 .archive-header-category .archive-heading::after  {
