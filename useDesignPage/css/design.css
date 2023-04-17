@@ -56,6 +56,11 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
   text-decoration: none;
 }
 
+.scroll-nav ul li a:hover,
+.scroll-nav ul li a:active {
+  background: #616161;
+}
+
 .archive-header-category .archive-heading::after  {
     content: " に関する記事一覧";/*説明文*/
     font-size: 1.2rem;/*カテゴリ名より小さく*/
