@@ -61,6 +61,8 @@ body{ background-image: url('/images/theme/backgrounds/2014/pattern-07.png'); ba
   background: #616161;
 }
 
+
+
 .archive-header-category .archive-heading::after  {
     content: " に関する記事一覧";/*説明文*/
     font-size: 1.2rem;/*カテゴリ名より小さく*/
@@ -779,4 +781,17 @@ box-shadow: 3px 3px 5px rgba(128,128,128,0.8);
   font-weight: bold;
   border: 1px solid #454545;
   text-decoration: none !important;
+}
+
+/* 検索窓 */
+.hatena-module-search-box .search-form {
+  margin: 0 auto; /*上下左右の位置調整*/
+  margin-bottom: 30px; /*下の余白*/
+  border: 2px solid #393632; /*囲い枠の装飾*/
+  background: #FFFFFF; /*検索窓内の背景色*/
+}
+
+/* 検索結果ページの検索窓を非表示にする */
+.search-result-form {
+  display: none;
 }
