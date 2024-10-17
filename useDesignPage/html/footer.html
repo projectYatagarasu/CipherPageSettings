@@ -18,7 +18,8 @@ function smoothScroll(o){var e=window.pageYOffset,l=o>e;setTimeout(function(){l&
 
 <script type="text/javascript">
     // 現在のページが記事一覧の2ページ目以降の場合処理実行
-    if (location.search.indexOf("?page=") === 0) {
+    // 検索結果の次のページも戻るを追加する ("&page="))
+    if (location.search.indexOf("?page=" || "&page=") === 0) {
         // aタグの作成
         var a = document.createElement('a');
         a.addEventListener("click", function(){history.back();}); // クリックすると一つ前の履歴に戻る処理を追加
